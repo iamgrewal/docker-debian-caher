@@ -14,7 +14,7 @@ RUN go mod download
 # --------------------------
 FROM debian:stable-slim AS final
 
-LABEL maintainer="YourName <you@example.com>"
+LABEL maintainer="YourName <jgrewal@po1.me>"
 LABEL description="Unified APT Caching & Mirroring Container for Home Lab"
 
 # Set environment variables
@@ -26,7 +26,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 # Install required packages & clean up
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    apt-cacher-ng=${APT_CACHER_NG_VERSION}* \
+    apt-cacher-ng \
     apt-mirror \
     ca-certificates \
     wget \
@@ -51,7 +51,8 @@ COPY entrypoint.sh /sbin/entrypoint.sh
 RUN chmod +x /sbin/entrypoint.sh
 
 # Expose necessary ports
-EXPOSE 3142/tcp  # Apt-Cacher-NG Web Interface
+# Apt-Cacher-NG Web Interface
+EXPOSE 3142
 
 # Healthcheck to verify service is running
 HEALTHCHECK --interval=30s --timeout=5s --retries=3 \

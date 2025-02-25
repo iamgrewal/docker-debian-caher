@@ -1,0 +1,42 @@
+############### Debian Bookworm Mirror ###############
+
+# Base Debian Repository
+deb     https://ftp.debian.org/debian/ bookworm main contrib non-free non-free-firmware
+deb-src https://ftp.debian.org/debian/ bookworm main contrib non-free non-free-firmware
+
+# Debian Updates
+deb     https://ftp.debian.org/debian/ bookworm-updates main contrib non-free non-free-firmware
+deb-src https://ftp.debian.org/debian/ bookworm-updates main contrib non-free non-free-firmware
+
+# Debian Backports
+deb     https://ftp.debian.org/debian/ bookworm-backports main contrib non-free non-free-firmware
+deb-src https://ftp.debian.org/debian/ bookworm-backports main contrib non-free non-free-firmware
+
+# Debian Proposed Updates (use with caution)
+deb     https://ftp.debian.org/debian/ bookworm-proposed-updates main contrib non-free non-free-firmware
+deb-src https://ftp.debian.org/debian/ bookworm-proposed-updates main contrib non-free non-free-firmware
+
+# Debian Security Updates
+deb     https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+deb-src https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+
+############### Extra Mirrors (Optional) ###############
+# Uncomment below if needed
+
+# Fastly mirror (alternative for better speeds)
+deb https://deb.debian.org/debian/ bookworm main contrib non-free non-free-firmware
+deb-src https://deb.debian.org/debian/ bookworm main contrib non-free non-free-firmware
+
+# Cloudflare mirror (good for global users)
+deb https://mirror.leaseweb.net/debian/ bookworm main contrib non-free non-free-firmware
+deb-src https://mirror.leaseweb.net/debian/ bookworm main contrib non-free non-free-firmware
+deb https://download.docker.com/linux/debian bookworm  stable
+
+#Proxmox
+deb http://download.proxmox.com/debian/ceph-squid bookworm no-subscription
+deb http://download.proxmox.com/debian/ceph-reef bookworm no-subscription
+deb http://download.proxmox.com/debian/pve bookworm pve-no-subscription
+deb-src http://download.proxmox.com/debian/pve bookworm pve-no-subscription
+deb https://apt.releases.hashicorp.com bookworm main
+deb-src https://apt.releases.hashicorp.com bookworm main
+
