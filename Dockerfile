@@ -1,5 +1,5 @@
 # --------------------------
-# 1️⃣ Builder Stage: Golang
+# 1️⃣ Builder Stage: Golang V2
 # --------------------------
 FROM golang:1.24 AS builder
 
